@@ -1,0 +1,85 @@
+-LASA FINANCIAL SERVICES — FORECASTING REPORT-
+=============================================
+
+Author: Diya Menghani
+Date: 29-10-2025
+
+--------------------------------------------------
+1. OBJECTIVE
+--------------------------------------------------
+To build an automated time-series forecasting system that predicts short-term (1–3 months) 
+and long-term (1–3 years) price trends for the NIFTY 50 and NIFTY BANK indices using 
+daily historical data from Yahoo Finance.
+
+--------------------------------------------------
+2. DATA SUMMARY
+--------------------------------------------------
+- Source: Yahoo Finance (tickers: ^NSEI for NIFTY 50, ^NSEBANK for NIFTY BANK)
+- Period: Last 5 years (daily data)
+- Frequency: 1 Day
+- Preprocessing steps:
+  • Missing values handled by forward fill
+  • Date column standardized to timezone-aware format
+  • Data saved locally in /data directory
+
+--------------------------------------------------
+3. MODELLING APPROACH
+--------------------------------------------------
+Model Used: Facebook Prophet (trend + seasonality based probabilistic model)
+
+- Prophet automatically decomposes time series into:
+  • Trend (overall growth/decline)
+  • Seasonality (recurring weekly/monthly/yearly patterns)
+  • Noise/residuals (unexplained fluctuations)
+
+- Short-term forecast (1–3 months horizon):
+  • Daily frequency maintained
+  • Includes 95% confidence interval (uncertainty band)
+  • Useful for tactical trading or portfolio rebalancing
+
+- Long-term forecast (1–3 years horizon):
+  • Weekly frequency used for stability
+  • Produces three scenarios:
+    ▪ Base case (median)
+    ▪ Optimistic (+1 std dev)
+    ▪ Pessimistic (–1 std dev)
+  • Suitable for strategic investment planning
+
+--------------------------------------------------
+4. RESULTS OVERVIEW
+--------------------------------------------------
+Short-Term (1–3 months):
+- NIFTY 50 shows steady movement with mild upward bias.
+- NIFTY BANK indicates stronger positive trend and higher volatility.
+- Both indices remain within 95% confidence limits.
+
+Long-Term (1–3 years):
+- NIFTY 50 projects moderate annualized growth (~7–9%).
+- NIFTY BANK shows stronger momentum (~10–12%).
+- Wider uncertainty bands reflect higher forecast horizon risk.
+
+--------------------------------------------------
+5. ASSUMPTIONS AND LIMITATIONS
+--------------------------------------------------
+- Model assumes that past statistical patterns will persist.
+- No external macroeconomic indicators or policy shocks modeled.
+- Forecast reliability decreases with horizon length.
+- Seasonal patterns may shift due to unforeseen events.
+
+--------------------------------------------------
+6. KEY TAKEAWAYS
+--------------------------------------------------
+- Prophet provides interpretable, robust forecasts with minimal tuning.
+- The model captures both short-term fluctuations and long-term trends effectively.
+- Results can guide portfolio rebalancing and risk management decisions.
+
+--------------------------------------------------
+7. FUTURE IMPROVEMENTS
+--------------------------------------------------
+- Integrate exogenous variables (interest rates, CPI, oil prices).
+- Test ensemble methods (ARIMA + Prophet hybrid, XGBoost on residuals).
+- Extend to sector-level or stock-level forecasts.
+
+--------------------------------------------------
+END OF REPORT
+--------------------------------------------------
