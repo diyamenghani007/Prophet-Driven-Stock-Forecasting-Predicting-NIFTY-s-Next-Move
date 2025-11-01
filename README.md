@@ -34,7 +34,7 @@ You’ll find:
 ---
 
 ## Project Structure
-LASA_FINANCIAL_PROJECT/
+stock_forecasting/
 │
 ├── data/
 │   ├── NIFTY_50_data.csv
