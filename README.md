@@ -34,7 +34,7 @@ You’ll find:
 ---
 
 ## Project Structure
-stock_forecasting/
+Prophet-Driven-Stock-Forecasting-Predicting-NIFTY-s-Next-Move/
 │
 ├── data/
 │   ├── NIFTY_50_data.csv
