@@ -1,6 +1,6 @@
 # Model Evaluation and Confidence Summary
 
-The forecasting model developed for LASA Financial Services leverages **Facebook Prophet**, a probabilistic time-series model capable of capturing both trend and seasonality in financial data. The model was trained on 5 years of daily price data for the NIFTY 50 and NIFTY BANK indices fetched from Yahoo Finance.
+The forecasting model developed leverages **Facebook Prophet**, a probabilistic time-series model capable of capturing both trend and seasonality in financial data. The model was trained on 5 years of daily price data for the NIFTY 50 and NIFTY BANK indices fetched from Yahoo Finance.
 
 **Confidence and Performance:**  
 Prophet demonstrated strong performance for short-term forecasts (1–3 months), successfully identifying recent market momentum and cyclic behavior. The model’s built-in confidence intervals (95% CI) provide a realistic range of potential future values, indicating moderate confidence in short-term projections. For long-term forecasts (1–3 years), confidence naturally decreases as uncertainty compounds over time, which is reflected in the widening prediction intervals.
