@@ -1,4 +1,4 @@
-# LASA Financial Forecasting Project
+# Prophet-Driven Stock Forecasting: Predicting NIFTY’s Next Move
 
 ## Overview
 This project forecasts short-term (3 months) and long-term (3 years) price trends for **NIFTY 50** and **NIFTY BANK** indices using **Yahoo Finance** data and **Facebook Prophet** for time-series modeling.  
