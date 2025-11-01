@@ -148,22 +148,3 @@ with open("outputs/summary.txt", "w", encoding="utf-8") as f:
         f.write(f"  Long-Term (3Y) Projection: ₹{long_mean:.2f}\n")
         f.write(f"  Expected Trend: {'Bullish' if long_mean > last_price else 'Bearish'}\n")
         f.write("\n")
-
-    f.write("="*60 + "\n")
-    f.write("Model Used: Facebook Prophet\n")
-    f.write("Assumptions:\n")
-    f.write("- Future trends follow historical patterns.\n")
-    f.write("- No major economic or political shocks.\n")
-    f.write("- Data quality and market efficiency assumed.\n\n")
-
-    f.write("Limitations:\n")
-    f.write("- Past performance doesn’t guarantee future results.\n")
-    f.write("- Model ignores external macroeconomic variables.\n")
-    f.write("- Forecast accuracy decreases with time horizon.\n\n")
-
-    f.write("Confidence Notes:\n")
-    f.write("- Short-term confidence is moderate (~70–80%).\n")
-    f.write("- Long-term forecasts have higher uncertainty (>90% CI).\n")
-
-print(f"\nReport saved to: {report_path}")
-print("\nAll tasks complete! Check 'outputs/' folder for plots and report.")
