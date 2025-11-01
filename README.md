@@ -20,8 +20,8 @@ It automatically fetches data, preprocesses it, generates forecasts, and produce
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/<your-username>/lasa_financial_project.git
-   cd lasa_financial_project
+   git clone https://github.com/diyamenghani007/Prophet-Driven-Stock-Forecasting-Predicting-NIFTY-s-Next-Move
+   cd Prophet-Driven-Stock-Forecasting-Predicting-NIFTY-s-Next-Move
 2. Run the Script:
    python main.py
 
